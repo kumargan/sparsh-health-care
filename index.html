@@ -76,28 +76,38 @@
         </div>
       </div>
     </section>
-		
+	<script>
+      function myFunction() {
+        document.getElementById("userDetails").submit();
+        document.getElementById("userDetails").reset();
+        document.getElementById("formSubmitMessage").style.display = "block";
+      }
+    </script>
 		<section class="ftco-section ftco-services">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-5 col-lg-4">
-						<form action="#" class="getaquote-form">
-							<h3>Request A Quote</h3>
+						<form id="userDetails" action="https://3dy73qo40d.execute-api.ap-south-1.amazonaws.com/details" method="POST" target="hiddenFrame" class="getaquote-form">
+							<h3>Post A Query</h3>
 							<div class="wrap">
 	              <div class="form-group">
-	                <input type="text" class="form-control" placeholder="Email Address">
+	                <input type="text" class="form-control" name="name" placeholder="Name">
 	              </div>
 	              <div class="form-group">
-	                <input type="text" class="form-control" placeholder="Email Address">
+	                <input type="text" class="form-control" name="email" placeholder="Email Address">
 	              </div>
 	              <div class="form-group">
-	                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+	                <input type="text" class="form-control" name="phone" placeholder="Phone No">
 	              </div>
 	              <div class="form-group">
-	                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+	                <input type="text" class="form-control" name="message" placeholder="Message">
+	              </div>
+	              <div class="form-group">
+	                <input type="button" onclick="myFunction()" value="Send Message" class="btn btn-primary py-3 px-5">
 	              </div>
               </div>
             </form>
+            <iframe name="hiddenFrame" width="0" height="0" class="hidden"></iframe>
 					</div>
 					<div class="col-md-7 col-lg-8">
 						<div class="row pl-md-4">
@@ -599,7 +609,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalAppointmentLabel">Request a Quote</h5>
+            <h5 class="modal-title" id="modalAppointmentLabel">Post A Query</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
