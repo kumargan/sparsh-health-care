@@ -57,7 +57,7 @@
           <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Dental  &amp; General Physician </h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We offer professional, comprehensive, evidence-based dentistry that focuses on the overall health of your teeth, gums and jaw.</p>
             <p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3" data-toggle="modal" data-target="#modalRequest">Make an Appointment</a></p>
           </div>
         </div>
@@ -70,7 +70,7 @@
           <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Dental  &amp; General Physician </h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p><p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3" data-toggle="modal" data-target="#modalRequest">Make an Appointment</a></p>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We offer professional, comprehensive, evidence-based dentistry that focuses on the overall health of your teeth, gums and jaw.</p><p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3" data-toggle="modal" data-target="#modalRequest">Make an Appointment</a></p>
           </div>
         </div>
         </div>
@@ -81,6 +81,12 @@
         document.getElementById("userDetails").submit();
         document.getElementById("userDetails").reset();
         document.getElementById("formSubmitMessage").style.display = "block";
+      }
+
+      function myFunctionNew() {
+        document.getElementById("userDetailsNew").submit();
+        document.getElementById("userDetailsNew").reset();
+        document.getElementById("appointment_div").click();
       }
     </script>
 		<section class="ftco-section ftco-services">
@@ -117,8 +123,8 @@
 		            		<span class="flaticon-family-room"></span>
 		              </div>
 		              <div class="media-body pl-4">
-		                <h3 class="heading">Family Law</h3>
-		                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+		                <h3 class="heading">Restorative Dentistry</h3>
+		                <p>We provide many effective restorative treatments. Tooth-colored fillings, crowns, dental implants, and root canal therapy. </p>
 		              </div>
 		            </div>      
 		          </div>
@@ -610,42 +616,31 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="modalAppointmentLabel">Post A Query</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" id="appointment_div" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <form action="#">
+            <form id="userDetailsNew" action="https://3dy73qo40d.execute-api.ap-south-1.amazonaws.com/details" method="POST" target="hiddenFrame">
               <div class="form-group">
                 <label for="appointment_name" class="text-black">Full Name</label>
-                <input type="text" class="form-control" id="appointment_name">
+                <input type="text" class="form-control" name="name">
               </div>
               <div class="form-group">
                 <label for="appointment_email" class="text-black">Email</label>
-                <input type="text" class="form-control" id="appointment_email">
+                <input type="text" class="form-control" name="email">
               </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="appointment_date" class="text-black">Date</label>
-                    <input type="text" class="form-control" id="appointment_date">
-                  </div>    
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="appointment_time" class="text-black">Time</label>
-                    <input type="text" class="form-control" id="appointment_time">
-                  </div>
-                </div>
+              <div class="form-group">
+                <label for="appointment_phone" class="text-black">Phone No</label>
+                <input type="text" class="form-control" name="phone">
               </div>
-              
 
               <div class="form-group">
                 <label for="appointment_message" class="text-black">Message</label>
-                <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
+                <input type="text" class="form-control" name="message">
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary">
+                <input type="button" onclick="myFunctionNew()" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           </div>
