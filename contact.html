@@ -53,6 +53,7 @@
       function myFunction() {
         document.getElementById("userDetails").submit();
         document.getElementById("userDetails").reset();
+        document.getElementById("formSubmitMessage").style.display = "block";
       }
     </script>
     
@@ -89,7 +90,7 @@
             <p><span>Email:</span> <a>sparshdentalhealthcare@gmail.com</a></p>
           </div>
         </div>
-        <iframe name="hiddenFrame" width="0" height="0"></iframe>
+
         <div class="row block-9">
           <div class="col-md-6 pr-md-5">
             <form id="userDetails" action="https://3dy73qo40d.execute-api.ap-south-1.amazonaws.com/details" method="POST" target="hiddenFrame">
@@ -112,7 +113,8 @@
                 <input type="button" onclick="myFunction()" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
-          
+          <div id="formSubmitMessage" style="display:none" ><p>Submitted Successfully</p></div>
+          <iframe name="hiddenFrame" width="0" height="0" class="hidden"></iframe>
           </div>
 
           <div class="col-md-6 d-flex">
