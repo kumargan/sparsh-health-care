@@ -57,7 +57,7 @@
           <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Dental  &amp; General Physician </h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We offer professional, comprehensive, evidence-based dentistry that focuses on the overall health of your teeth, gums and jaw.</p>
             <p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3" data-toggle="modal" data-target="#modalRequest">Make an Appointment</a></p>
           </div>
         </div>
@@ -70,34 +70,50 @@
           <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Dental  &amp; General Physician </h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p><p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3" data-toggle="modal" data-target="#modalRequest">Make an Appointment</a></p>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We offer professional, comprehensive, evidence-based dentistry that focuses on the overall health of your teeth, gums and jaw.</p><p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3" data-toggle="modal" data-target="#modalRequest">Make an Appointment</a></p>
           </div>
         </div>
         </div>
       </div>
     </section>
-		
+	<script>
+      function myFunction() {
+        document.getElementById("userDetails").submit();
+        document.getElementById("userDetails").reset();
+        document.getElementById("formSubmitMessage").style.display = "block";
+      }
+
+      function myFunctionNew() {
+        document.getElementById("userDetailsNew").submit();
+        document.getElementById("userDetailsNew").reset();
+        document.getElementById("appointment_div").click();
+      }
+    </script>
 		<section class="ftco-section ftco-services">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-5 col-lg-4">
-						<form action="#" class="getaquote-form">
-							<h3>Request A Quote</h3>
+						<form id="userDetails" action="https://3dy73qo40d.execute-api.ap-south-1.amazonaws.com/details" method="POST" target="hiddenFrame" class="getaquote-form">
+							<h3>Post Query</h3>
 							<div class="wrap">
 	              <div class="form-group">
-	                <input type="text" class="form-control" placeholder="Email Address">
+	                <input type="text" class="form-control" name="name" placeholder="Name">
 	              </div>
 	              <div class="form-group">
-	                <input type="text" class="form-control" placeholder="Email Address">
+	                <input type="text" class="form-control" name="email" placeholder="Email Address">
 	              </div>
 	              <div class="form-group">
-	                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+	                <input type="text" class="form-control" name="phone" placeholder="Phone No">
 	              </div>
 	              <div class="form-group">
-	                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+	                <input type="text" class="form-control" name="message" placeholder="Message">
+	              </div>
+	              <div class="form-group">
+	                <input type="button" onclick="myFunction()" value="Send Message" class="btn btn-primary py-3 px-5">
 	              </div>
               </div>
             </form>
+            <iframe name="hiddenFrame" width="0" height="0" class="hidden"></iframe>
 					</div>
 					<div class="col-md-7 col-lg-8">
 						<div class="row pl-md-4">
@@ -107,8 +123,8 @@
 		            		<span class="flaticon-family-room"></span>
 		              </div>
 		              <div class="media-body pl-4">
-		                <h3 class="heading">Family Law</h3>
-		                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+		                <h3 class="heading">Restorative Dentistry</h3>
+		                <p>We provide many effective restorative treatments. Tooth-colored fillings, crowns, dental implants, and root canal therapy. </p>
 		              </div>
 		            </div>      
 		          </div>
@@ -118,8 +134,10 @@
 		            		<span class="flaticon-bar-chart"></span>
 		              </div>
 		              <div class="media-body pl-4">
-		                <h3 class="heading">Business Law</h3>
-		                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+		                <h3 class="heading">Painless root canals</h3>
+		                <p>Tooth pain may be a symptom indicating there’s something wrong with the nerve inside a tooth.
+
+Root canals can now be performed easier, faster and with minimal discomfort.</p>
 		              </div>
 		            </div>    
 		          </div>
@@ -129,8 +147,8 @@
 		            		<span class="flaticon-medicine"></span>
 		              </div>
 		              <div class="media-body pl-4">
-		                <h3 class="heading">Drug Control Law</h3>
-		                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+		                <h3 class="heading">Pedodontics/Child Dentistry</h3>
+		                <p>Text- dental care starts at home as early as 6 months of age. We provide all round care so that dental cavity and uneven teeth is prevented, called as preventive dentistry.</p>
 		              </div>
 		            </div>      
 		          </div>
@@ -140,8 +158,8 @@
 		            		<span class="flaticon-prison"></span>
 		              </div>
 		              <div class="media-body pl-4">
-		                <h3 class="heading">Criminal Law</h3>
-		                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+		                <h3 class="heading">Dentures/False Teeth - Fixed/Removable</h3>
+		                <p>Text- smile is most beautiful makeup which can be worn. We provide all varieties of  tooth coloured dentures and ceramic teeth</p>
 		              </div>
 		            </div>      
 		          </div>
@@ -154,21 +172,27 @@
 		<section class="ftco-section ftc-no-pb">
 			<div class="container">
 				<div class="row no-gutters">
-					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
-						<a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/bg_1.jpg);">
+						<a href="https://vimeo.com/442328617" class="icon popup-vimeo d-flex justify-content-center align-items-center">
 							<span class="icon-play"></span>
 						</a>
 					</div>
 					<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
 	          <div class="heading-section mb-5 pl-md-5">
 	          	<div class="pl-md-5 ml-md-5">
-		          	<span class="subheading">Company Overview</span>
-		            <h2 class="mb-4">Learned about the Law</h2>
+		          	<span class="subheading">Clinic Overview</span>
+		            <h2 class="mb-4">Total health care solutions</h2>
 	            </div>
 	          </div>
 	          <div class="pl-md-5 ml-md-5 mb-5">
-							<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-							<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+
+	          				<p>General physician:</p>
+	          				<p>Our specialist always aspire to bridge the gap between your benefit plan and the health needs of your family. We aim at providing best general health care advice with as less test as possible</p>
+
+							<p>Dental Clinic / Dentistry:</p>
+							<p>
+We are determined at providing best dental treatment at affordable rates with outmost care. Providing preventive Dentistry instead of curative dentistry naims at keeping tooth extractions and root canals as last resort</p>
+							<p>We try our best to save tooth from any major treatment. We also aim to maintain overall  health of teeth for longevity</p>
 							<p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
 						</div>
 					</div>
@@ -231,13 +255,13 @@
     <section class="ftco-section ftc-no-pb">
 			<div class="container">
 				<div class="row no-gutters">
-					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center order-md-last" style="background-image: url(images/about-2.jpg);">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center order-md-last" style="background-image: url(images/14.jpg);">
 					</div>
 					<div class="col-md-7 wrap-about ftco-animate">
 	          <div class="heading-section mb-5 pl-md-5">
 	          	<div class="pr-md-5 mr-md-5 text-md-right">
-		          	<span class="subheading">Company Help Intro</span>
-		            <h2 class="mb-4">The People We Help</h2>
+		          	<span class="subheading">Clinic Service</span>
+		            <h2 class="mb-4">Our Emergency Services</h2>
 	            </div>
 	          </div>
 	          <div class="pr-md-5 pl-md-5 mr-md-5 mb-5">
@@ -246,8 +270,8 @@
 	            		<span class="flaticon-balance"></span>
 	              </div>
 	              <div class="media-body pr-4 order-md-first text-md-right">
-	                <h3 class="heading">Fight for Justice</h3>
-	                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+	                <h3 class="heading">Sickly Visits, Stomach Ache,Fever</h3>
+	                <p>Sickly Visits, Severe Stomach Ache,Fever</p>
 	              </div>
 	            </div>
 	            <div class="services-wrap d-flex">
@@ -255,8 +279,8 @@
 	            		<span class="flaticon-balance"></span>
 	              </div>
 	              <div class="media-body pr-4 order-md-first text-md-right">
-	                <h3 class="heading">Best Case Strategy</h3>
-	                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+	                <h3 class="heading">24/7 Online / Telephonic Consultations</h3>
+	                <p>24/7 Online / Telephonic consultations.</p>
 	              </div>
 	            </div>
 	            <div class="services-wrap d-flex">
@@ -264,8 +288,17 @@
 	            		<span class="flaticon-balance"></span>
 	              </div>
 	              <div class="media-body pr-4 order-md-first text-md-right">
-	                <h3 class="heading">Experience Attorneys</h3>
-	                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+	                <h3 class="heading">Emergency Dental Treatment</h3>
+	                <p>Emergency Dental Treatment for pain relief.</p>
+	              </div>
+	            </div>
+	            <div class="services-wrap d-flex">
+	              <div class="icon d-flex justify-content-center align-items-center">
+	            		<span class="flaticon-balance"></span>
+	              </div>
+	              <div class="media-body pr-4 order-md-first text-md-right">
+	                <h3 class="heading">Free Dental camps and Health camps</h3>
+	                <p>Free Dental check up camps and Health checkup camps.</p>
 	              </div>
 	            </div>
 						</div>
@@ -399,8 +432,8 @@
 				<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
           	<span class="subheading">Experienced Attorneys</span>
-            <h2 class="mb-4">Meet our attorneys</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+            <h2 class="mb-4">Meet our Doctors</h2>
+            <p>MBBS ( Medical Offier Sadar Hospital, Ramgarh. Ex Fortis Physician, Delhi ) &amp; BDS ( Ex dentist in Dr Jagdeesh dental hospital, Bangalore)</p>
           </div>
         </div>	
 				<div class="row">
@@ -408,8 +441,8 @@
 						<div class="staff">
 							<div class="img" style="background-image: url(images/person_1.jpg);"></div>
 							<div class="text pt-4">
-								<h3>David Smith</h3>
-								<span class="position mb-2">Family Lawyer</span>
+								<h3>Dr Mayank (MBBS)</h3>
+								<span class="position mb-2">Physician</span>
 								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 								<ul class="ftco-social d-flex">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -424,10 +457,10 @@
 						<div class="staff">
 							<div class="img" style="background-image: url(images/person_2.jpg);"></div>
 							<div class="text pt-4">
-								<h3>David Smith</h3>
-								<span class="position mb-2">Consumer Lawyer</span>
+								<h3>Dr Sarita (BDS)</h3>
+								<span class="position mb-2">Senior Dentist</span>
 								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
+				  <ul class="ftco-social d-flex">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
 	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
@@ -436,38 +469,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(images/person_3.jpg);"></div>
-							<div class="text pt-4">
-								<h3>David Smith</h3>
-								<span class="position mb-2">Criminal Lawyer</span>
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-	              </ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(images/person_4.jpg);"></div>
-							<div class="text pt-4">
-								<h3>David Smith</h3>
-								<span class="position mb-2">Business Lawyer</span>
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-	              </ul>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</section>
@@ -538,6 +540,7 @@
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-md-5" id="map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14654.396544780699!2d85.3156891!3d23.3302988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb5ca45b6d3f27d55!2sSPARSH%20HEALTH%20CARE!5e0!3m2!1sen!2sin!4v1595849553867!5m2!1sen!2sin" width="500" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 					</div>
 					<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
 	          <div class="heading-section mb-md-5 pl-md-5 mt-5 pt-3">
@@ -548,15 +551,12 @@
 	          </div>
 	          <div class="pl-md-5 ml-md-5">
 	          	<div class="info-contact mb-5">
-	          		<p><span>Phone:</span> <span>(00) 123 - 456 - 789</span></p>
-	          		<p><span>Fax:</span> <span>(00) 123 - 456 - 789</span></p>
-	          		<p><span>E-Mail:</span> <span><a href="#">info@emial.com</a></span></p>
+	          		<p><span>Phone:</span> <span>+91 8249438098 / 8969622981</span></p>
+	          		<p><span>E-Mail:</span> <span><a href="#">sparshdentalhealthcare@gmail.com</a></span></p>
 	          	</div>
 	          	<div class="info-contact mb-5">
 	          		<h3>Address Information</h3>
-	          		<p><span>Address</span> <span> 203 Fake St. Mountain View, San Francisco, California, USA</span></p>
-	          		<p><span>Fax:</span> <span>(00) 123 - 456 - 789</span></p>
-	          		<p><span>E-Mail:</span> <span><a href="#">info@emial.com</a></span></p>
+	          		<p><span>Address</span> <span> Sparsh Health Care, G1, Ground floor, Bhoo Lok Apartment, Opposite HDFC Bank, Hinoo Main Road, Ranchi, Jharkhand. 834002</span></p>
 	          	</div>
 						</div>
 					</div>
@@ -632,43 +632,32 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalAppointmentLabel">Request a Quote</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title" id="modalAppointmentLabel">Make Appointment</h5>
+            <button type="button" id="appointment_div" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <form action="#">
+            <form id="userDetailsNew" action="https://3dy73qo40d.execute-api.ap-south-1.amazonaws.com/details" method="POST" target="hiddenFrame">
               <div class="form-group">
                 <label for="appointment_name" class="text-black">Full Name</label>
-                <input type="text" class="form-control" id="appointment_name">
+                <input type="text" class="form-control" name="name">
               </div>
               <div class="form-group">
                 <label for="appointment_email" class="text-black">Email</label>
-                <input type="text" class="form-control" id="appointment_email">
+                <input type="text" class="form-control" name="email">
               </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="appointment_date" class="text-black">Date</label>
-                    <input type="text" class="form-control" id="appointment_date">
-                  </div>    
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="appointment_time" class="text-black">Time</label>
-                    <input type="text" class="form-control" id="appointment_time">
-                  </div>
-                </div>
+              <div class="form-group">
+                <label for="appointment_phone" class="text-black">Phone No</label>
+                <input type="text" class="form-control" name="phone">
               </div>
-              
 
               <div class="form-group">
                 <label for="appointment_message" class="text-black">Message</label>
-                <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
+                <input type="text" class="form-control" name="message">
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary">
+                <input type="button" onclick="myFunctionNew()" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           </div>
@@ -696,7 +685,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
